@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Akar.ECommerce.Dtos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d66e53e8d6ce06c92b2d7e680a644f9d3746f85")]
 [assembly: System.Reflection.AssemblyProductAttribute("Akar.ECommerce.Dtos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Akar.ECommerce.Dtos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
