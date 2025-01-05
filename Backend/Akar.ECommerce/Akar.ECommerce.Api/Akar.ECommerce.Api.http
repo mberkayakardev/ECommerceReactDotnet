@@ -1,0 +1,6 @@
+@Akar.ECommerce.Api_HostAddress = http://localhost:5073
+
+GET {{Akar.ECommerce.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
