@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ne8wHlERWTA=",
+  "dgSpecHash": "0XKX9BFmO98=",
   "success": true,
   "projectFilePath": "D:\\Github\\ECommerceReactDotNet\\Backend\\Akar.ECommerce\\Akar.ECommerce.Entities\\Akar.ECommerce.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mberk\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\mberk\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
+    "C:\\Users\\mberk\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\mberk\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\mberk\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
     "C:\\Users\\mberk\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.0\\microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
