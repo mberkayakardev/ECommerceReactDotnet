@@ -8,9 +8,9 @@
 <br />
 
 <div align="center">
-  <h3 align="center">E-Commerce</h3>
+  <h3 align="center">E-Commerce React + .Net</h3>
   <br>
-  <h3> <a href=""> E Commerce Project</a> </h3> 
+  <h3> <a href=""> Akar E Ticaret</a> </h3> 
 </div>
 
 
@@ -32,13 +32,16 @@
 
 <!-- ABOUT THE PROJECT -->
 <h2 id="Proje-Hakkinda"> Proje Hakkında </h2>
+<!-- 
+<img src ="https://raw.githubusercontent.com/mberkayakardev/QueryFlowApp/refs/heads/master/CoreMVC/Resimler/1.png" >
+<img src ="https://raw.githubusercontent.com/mberkayakardev/QueryFlowApp/refs/heads/master/CoreMVC/Resimler/2.png" >
+<img src ="https://raw.githubusercontent.com/mberkayakardev/QueryFlowApp/refs/heads/master/CoreMVC/Resimler/3.png" > -->
 
- <!-- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/welcome.png?raw=true" > -->
  
 
 
 
-* React & .Net teknolojileri kullanılarak geliştirilmiş olan bir ETicaret Projesidir. 
+* Ön yüz olarak MVC ve VUE (şimdilik sadece mvc ) kullanılarak bir front end simüle edilmiş olup arka planda .net Core Web apiden beslenen sınav veya anketlerin oluşturulduğu, anketlerin kullanıcılara atandığı ve onaycı mekanizması ile üst onaycılara sınavların onaylatıldığı bir proje yazıldı.  
 
 <p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
@@ -47,11 +50,13 @@
 
 * .Net 9.0
 
-* N-Tier Achitecture - (Çok katmanlı mimari)
+* .Net 9.0 Web Api
 
 * JWT
 
-* APİ
+* Refresh Token & Auth Service 
+
+* N-Tier Achitecture - (Çok katmanlı mimari)
 
 * Unit Of Work
 
@@ -65,21 +70,26 @@
 
 * Entity Framework Core (Code first)
 
-* Javascript
+* Bootstrap
 
-* React  
+* HTML
 
-* MaterialUI
+* CSS
+
+* JS
+
+* React 18
+
+* Vite
+
+* HttpClient
+
+* İnterseptors
+
+* Axios
+
+* MAterialUI
 
 
 
-<!-- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/Resume.png?raw=true" >
- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/Projects.png?raw=true" >
- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/detail.png?raw=true" >
- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/notfoundpage.png?raw=true" >
- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/login.png?raw=true" >
- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/last.png?raw=true" >
- <img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/1.png?raw=true" >
-<img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/2.png?raw=true" >
-<img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/3.png?raw=true" >
-<img src ="https://github.com/mberkayakardev/ResumePage/blob/master/%C4%B0%C3%A7erik/Resimler/4.png?raw=true" > -->
+

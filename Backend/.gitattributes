@@ -1,0 +1,24 @@
+# wwwroot klasörünü dil analizine dahil etme (statik dosyalar)
+wwwroot/** linguist-vendored
+Udemy.AdvertisementApp.UI/wwwroot/** linguist-vendored
+
+# Astro dosyaları analiz dışı
+*.astro linguist-vendored
+
+# node_modules klasörünü dışla
+node_modules/** linguist-vendored
+
+# lib, dist gibi build klasörleri varsa dışla
+lib/** linguist-vendored
+dist/** linguist-vendored
+
+# Razor view dosyaları
+*.cshtml linguist-language=Razor
+
+# C# dosyaları
+**/*.cs linguist-language=C#
+
+# JSON, config, XML belgeleri analiz dışı (dokümantasyon)
+*.json linguist-documentation
+*.config linguist-documentation
+*.xml linguist-documentation

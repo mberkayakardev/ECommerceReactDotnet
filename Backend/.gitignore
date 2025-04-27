@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+*.dll
+*.pdb
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Others
+*.log
+*.cache
+

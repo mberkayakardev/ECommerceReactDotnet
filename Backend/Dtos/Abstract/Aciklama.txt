@@ -1,0 +1,1 @@
+﻿Projeye Özgü DTO lar geliştirmeniz gerekirse veya projeye özgü Abstractlar geliştirmeniz gerekirse bu aşamada bu süreci gerçekleştiriyoruz. 
