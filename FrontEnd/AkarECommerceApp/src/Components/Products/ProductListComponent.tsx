@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router';
 
 
 
@@ -33,7 +34,7 @@ function ProductListComponent (props: any){
 function Product(props :any){
     return (
         <>
-           <Card sx={{ maxWidth: 345, mt: 2 }}>
+           <Card sx={{ mt: 2 }}>
                 <CardMedia component="img" alt="green iguana" height="140" image="https://picsum.photos/200/300" />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div"> {props.product.productName} </Typography>
@@ -42,8 +43,8 @@ function Product(props :any){
                         </Typography>
                     </CardContent>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                   <Button variant="outlined">Sepete Ekle</Button>
+                   <Button component={Link} to={`product/${props.product.id}`} variant="outlined" color="warning">Detaylar</Button>
                 </CardActions>
             </Card>
             </>

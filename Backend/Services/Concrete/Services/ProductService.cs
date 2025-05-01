@@ -28,5 +28,17 @@ namespace Services.Concrete.Services
             return new ApiDataResult<List<ProductListDto>>(data: mappeddata, status: ApiResultStatus.Ok);
 
         }
+
+        public async Task<IApiDataResult<ProductListDto>> GetProductByIdForLanding(int id)
+        {
+            var RepositoryData = await _unitOfWork.ProductRepository.GetAsync(x => x.IsActive == true && x.Id == id);
+
+            if (RepositoryData == null)
+                return new ApiDataResult<ProductListDto>(data: default, status: ApiResultStatus.NotFound, Message: message.Messages.Product.NotFound, Errors: null);
+
+            var mappeddata = _mapper.Map<ProductListDto>(RepositoryData);
+
+            return new ApiDataResult<ProductListDto>(data: mappeddata, status: ApiResultStatus.Ok);
+        }
     }
 }

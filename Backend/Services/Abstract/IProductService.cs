@@ -7,5 +7,6 @@ namespace Services.Abstract
     public interface IProductService 
     {
         Task<IApiDataResult<List<ProductListDto>>> GetAllProductLandingPage();
+        Task<IApiDataResult<ProductListDto>> GetProductByIdForLanding(int id);
     }
 }

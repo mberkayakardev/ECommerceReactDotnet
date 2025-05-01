@@ -19,9 +19,14 @@ namespace WebApi.Controllers
 
 
         [HttpGet()]
-        public async Task<IActionResult> GetAllUserForAdmin()
+        public async Task<IActionResult> GetAllProductForLanding()
         {
             return ActionResultInstance(await _productService.GetAllProductLandingPage());
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProductByIdForlanding(int id)
+        {
+            return ActionResultInstance(await _productService.GetProductByIdForLanding(id));
         }
 
 
