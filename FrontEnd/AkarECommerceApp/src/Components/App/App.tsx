@@ -1,79 +1,30 @@
 import { useEffect, useState } from 'react'
 import '../App/App.css'
-import { IProduct } from '../../Model/IProduct';
+import { Outlet } from 'react-router'
+import Typography from '@mui/material/Typography';
 import Header from '../Header/Header';
-import ProductListComponent from '../Products/ProductListComponent';
-import { Container, CssBaseline } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 
-const MyArray = [
-  { id: 1, name: "Berkay", age: 28 },
-  { id: 2, name: "Ayşe", age: 24 },
-  { id: 3, name: "Mehmet", age: 32 },
-  { id: 4, name: "Hasan", age: 32 },
 
-];
-  // const [count, setCount] = useState("Berkay")
+
 function App() {
   
-  const [ProductList, setlist ] = useState<IProduct[]>([]);
-
   
-  useEffect( ()=> {
-    fetch("https://localhost:7132/api/Products")
-    .then( x=> x.json())
-    .then( y=> { console.log(y); setlist(y.data)}
-  
-  )},[])
-
-  function AddProduct(){
-    setlist(
-      [ ...ProductList,
-        { 
-          id: 155,
-          isActive: true,
-          createdDate: Date.now().toString(),
-          createdUserId: null,
-          createdUserName: null,
-          modifiedDate: Date.now().toString(),
-          modifiedUserId:  null,
-          modifiedUserName: null,
-          productDescription: "Description 1 ",
-          productDescriptionForTextEdit: "description 2 ",
-          productName: "Product Name 1 ",
-          productPrice: 1,
-          stock: 1
-        }])
-  }
-
-  return (
-        <>
-        <CssBaseline/>
-        <Header ProductListesi = {ProductList}/>
-
-        <Container>
-          <ProductListComponent ProductListesi = {ProductList} method1 = {AddProduct}/>
-        </Container>
-      </>
-      )
-}
-
-function Component1(){
-  return(
-  <>
-    <h1> Component1 (1. Komponent )</h1>
-      <Component2/>
-    </>
-
-  )
-}
-function Component2(){
   return(
     <>
-    <h2> Component 2 (2. Komponent)  </h2>
-    <Component3/>
+    <CssBaseline/>
+    <Header/>
+    <Outlet/>
     </>
   )
+
 }
+
+export default App
+
+
+
+
 // function Component3(){
 //   return(
 //     <>
@@ -253,4 +204,3 @@ function Component2(){
 
 
 
-export default App

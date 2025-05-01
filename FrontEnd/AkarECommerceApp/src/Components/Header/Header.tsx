@@ -8,22 +8,64 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { NavLink } from "react-router";
+import { Badge, colors, List, ListItem } from "@mui/material";
+import { CenterFocusStrong, ShoppingCart } from "@mui/icons-material";
 
+/// Dinamik bir şeklide linklerin dolduğu senaryoyu düşünelim. 
+const NavLinks = [
+    { text : "Ürünler" , to :"/" },
+    { text : "Hakkında" , to :"/about" },
+    { text : "İletisim" , to :"/contact" }
+]
 
-function Header(props : any){
+/// sx propertysi ile bizler komponentlerimize style verebilmekteyiz. 
+const navStyles = {
+    color: "inherit",
+    textDecoration:"none",
+    "&:hover":{
+        color:"text.primary"
+    },
+    "&.active":{
+        color:"warning.main"
+    }
+}
+
+function Header(){
     return (
         
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static"> 
-                <Toolbar> 
-                    {/* <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} >
-                        <MenuIcon />
-                    </IconButton>
-                     */}
-                    {/* bir yazı eklemek istersen Typeografi olarak eklenecek variant ile h6 tipinde bir etiket oluşturulacağını belirliyoruz.  */}
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> Akar E-Ticaret  </Typography>
-                    
-                    <Button color="inherit">Login</Button>
+                <Toolbar sx={{display:"flex", justifyContent:"space-between"}}> 
+                    <Box sx={{display:"flex", alignItems:"center"}}>
+                        
+                        {/* bir yazı eklemek istersen Typeografi olarak eklenecek variant ile h6 tipinde bir etiket oluşturulacağını belirliyoruz.  */}
+                        <Typography variant="h6"  > Akar E-Ticaret  </Typography>
+                        
+                        {/* list komponenti kullanıyoruz elemanlar yan yana gelsin diye flex yaptık sx ile css yazabiliyoruz   List ul ye listitem ise li ye karşılık gelir html de */}
+                        <List sx={{display:"flex"}}>  
+                        {
+                            NavLinks.map(L => 
+                                // React Router içerisinden navlink imiz var 
+                                // Normalde bir link eklersek tüm sayfa sıfırdan yenilenir
+                                // Sayfa yenilenmeden komonentler arası geçiş için gerekiyor
+
+                                <ListItem component={NavLink} to={L.to} sx={navStyles} > { L.text } </ListItem>
+                                    
+                            )
+                        }
+                        </List>
+
+                    </Box>
+
+                    <Box sx={{display:"flex", alignItems:"center"}}>
+                        <IconButton size="large" edge="start" color="inherit">
+                            <Badge badgeContent="2" color="secondary">
+                                <ShoppingCart/>
+                            </Badge>
+                        </IconButton>
+                    </Box>
+
                     
                 </Toolbar>
             </AppBar>
