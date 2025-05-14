@@ -1,9 +1,11 @@
 import { createBrowserRouter, Router } from "react-router"; // 
-import App from '../Components/App/App'
-import CatalogPage from '../Pages/CatologPage'
-import AboutPage from '../Pages/AboutPage'
-import ContactPage from '../Pages/ContactPage'
-import ProductDetailPage from '../Pages/ProductDetailPage'
+import App from '../Components/Landings/App/App';
+import CatalogPage from '../Pages/CatologPage';
+import AboutPage from '../Pages/AboutPage';
+import ContactPage from '../Pages/ContactPage';
+import ProductDetailPage from '../Pages/ProductDetailPage';
+import LoginLanding from "../Components/Landings/Login/LoginLanding";
+import LoginPage from "../Pages/LoginPage";
 
 
 // bir tane sabit döneceğiz 
@@ -34,6 +36,16 @@ export const router = createBrowserRouter(
                     path:"contact",
                     element: <ContactPage/>
                 }
+            ]
+        },
+        {
+            path: "/login" ,
+            element:<LoginLanding/>,
+            children: [
+                {
+                    path:"",
+                    element: <LoginPage/>
+                } 
             ]
         }
     ]

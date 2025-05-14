@@ -1,18 +1,24 @@
 import Header from '../Components/Header/Header';
 import React, { useEffect, useState } from 'react';
 import ProductListComponent from '../Components/Products/ProductListComponent';
-import { Container} from '@mui/material';
+import { Container, CircularProgress, Box} from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 
 export default function CatologPage(){
  
     const [ProductList, setlist ] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
 
     useEffect( ()=> {
-      fetch("https://localhost:7132/api/Products")
+      fetch(import.meta.env.VITE_API_BASE_URL+"/Products")
       .then( x=> x.json())
-      .then( y=> { console.log(y); setlist(y.data)}
+      .then( y=> 
+        { console.log(y);
+          setlist(y.data); 
+          setLoading(false);
+        }
     
     )},[])
   
@@ -35,6 +41,23 @@ export default function CatologPage(){
             stock: 1
           }])
     }
+
+    if (loading) {
+                return (
+                  <Box
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    height="100vh"
+                  >
+                    <CircularProgress />
+                    <Typography mt={2}>Yükleniyor...</Typography>
+                  </Box>
+                );
+              }
+    
+              
   
     return (
           <>

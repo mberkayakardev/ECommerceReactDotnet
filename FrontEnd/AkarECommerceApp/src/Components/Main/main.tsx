@@ -4,11 +4,13 @@ import '../../index.css'
 import App from '../App/App.tsx'
 import { router } from '../../Router/Routes.tsx'
 import { RouterProvider } from 'react-router'
+import { Provider } from 'react-redux'
+import { AppStore } from '../../Store/AuthStore.ts'
 
 createRoot(document.getElementById('root')!).render(
-///  strict mode esasında development yaparken hatalarınızı söyleyen bir moddur.  
   <StrictMode> 
-    {/* <App /> */}
-    <RouterProvider router={router}/>
+    <Provider store={AppStore }>
+      <RouterProvider router={router}/> 
+    </Provider>
   </StrictMode>,
 )

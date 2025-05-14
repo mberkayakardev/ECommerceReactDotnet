@@ -59,6 +59,7 @@ function Header(){
                     </Box>
 
                     <Box sx={{display:"flex", alignItems:"center"}}>
+                    <Button component={NavLink}  sx={navStyles} to="/login"> Login </Button>
                         <IconButton size="large" edge="start" color="inherit">
                             <Badge badgeContent="2" color="secondary">
                                 <ShoppingCart/>
