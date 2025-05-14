@@ -1,6 +1,6 @@
 import { createBrowserRouter, Router } from "react-router"; // 
 import App from '../Components/Landings/App/App';
-import CatalogPage from '../Pages/CatologPage';
+import CatalogPage from '../Pages/Catologs/CatologPage';
 import AboutPage from '../Pages/AboutPage';
 import ContactPage from '../Pages/ContactPage';
 import ProductDetailPage from '../Pages/ProductDetailPage';

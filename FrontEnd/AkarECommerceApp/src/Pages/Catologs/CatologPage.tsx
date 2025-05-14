@@ -1,6 +1,6 @@
-import Header from '../Components/Header/Header';
+import Header from '../../Components/Header/Header';
 import React, { useEffect, useState } from 'react';
-import ProductListComponent from '../Components/Products/ProductListComponent';
+import ProductListComponent from '../../Components/Products/ProductListComponent';
 import { Container, CircularProgress, Box} from '@mui/material';
 import Typography from '@mui/material/Typography';
 

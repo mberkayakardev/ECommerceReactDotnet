@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { counterSlice } from "../Pages/Catologs/counterSlice";
 
 // bir store tanımladık
 // Store içerisinde birden çok state olabilir. 
@@ -13,7 +14,8 @@ export const AppStore = configureStore({
     /// bu reducer burada slice ler burada tanımlanacak 
     // yani state ve state e müdahale eden fonkisyonların tanımlandığı klasörler buraya refgister edilecek. 
     reducer: {
-        
+        /// ilk parameter isim : den sonrası ise bağlanacak slice 
+        counter: counterSlice.reducer
 
     }
 })   

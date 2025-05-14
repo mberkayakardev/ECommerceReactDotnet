@@ -11,6 +11,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from "react-router";
 import { Badge, colors, List, ListItem } from "@mui/material";
 import { CenterFocusStrong, ShoppingCart } from "@mui/icons-material";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../Store/AppStore.ts';
+import { decrement, increment } from './Catologs/counterSlice.tsx';
+
+
 
 /// Dinamik bir şeklide linklerin dolduğu senaryoyu düşünelim. 
 const NavLinks = [
@@ -32,6 +37,10 @@ const navStyles = {
 }
 
 function Header(){
+
+    const count = useSelector((state: RootState) => state.counter.value);
+    const Methods = useDispatch()
+   
     return (
         
         <Box sx={{ flexGrow: 1 }}>
@@ -61,7 +70,7 @@ function Header(){
                     <Box sx={{display:"flex", alignItems:"center"}}>
                     <Button component={NavLink}  sx={navStyles} to="/login"> Login </Button>
                         <IconButton size="large" edge="start" color="inherit">
-                            <Badge badgeContent="2" color="secondary">
+                            <Badge badgeContent={count} color="secondary">
                                 <ShoppingCart/>
                             </Badge>
                         </IconButton>

@@ -5,7 +5,7 @@ import App from '../App/App.tsx'
 import { router } from '../../Router/Routes.tsx'
 import { RouterProvider } from 'react-router'
 import { Provider } from 'react-redux'
-import { AppStore } from '../../Store/AuthStore.ts'
+import { AppStore } from '../../Store/AppStore.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode> 
